@@ -806,18 +806,18 @@ p {
   fill: var(--accent-cl);
 }
 
-.agreement__checkbox:checked + .agreement__icon .agreement__icon--uncheck {
+.agreement__checkbox:checked + .agreement__icon .agreement__icon-uncheck {
   opacity: 0;
   -webkit-transition: opacity var(--animation);
   transition: opacity var(--animation);
 }
 
-.agreement__icon--check {
+.agreement__icon-check {
   opacity: 0;
   -webkit-transition: opacity var(--animation);
   transition: opacity var(--animation);
 }
-.agreement__checkbox:checked + .agreement__icon .agreement__icon--check {
+.agreement__checkbox:checked + .agreement__icon .agreement__icon-check {
   opacity: 1;
 }
 
@@ -1201,5 +1201,5 @@ p {
   padding-bottom: 94px;
 }
 .portfolio__filter {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }/*# sourceMappingURL=main.css.map */

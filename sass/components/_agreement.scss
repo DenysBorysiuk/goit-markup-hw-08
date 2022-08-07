@@ -29,12 +29,12 @@
   }
 }
 
-.agreement__checkbox:checked + .agreement__icon .agreement__icon--uncheck {
+.agreement__checkbox:checked + .agreement__icon .agreement__icon-uncheck {
   opacity: 0;
   transition: opacity var(--animation);
 }
 
-.agreement__icon--check {
+.agreement__icon-check {
   opacity: 0;
   transition: opacity var(--animation);
 
