@@ -1,0 +1,50 @@
+.header {
+  background-color: var(--main-light);
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    @extend %reset-link;
+    margin-right: 93px;
+  }
+
+  &__nav {
+    margin-right: auto;
+  }
+
+  &__list {
+    @extend %reset-list;
+
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.header__link {
+  @extend %reset-link;
+
+  display: flex;
+  align-items: center;
+
+  @include fonts(14px, 16px, 500, 0.02em);
+  color: var(--secondary-font-cl);
+
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}

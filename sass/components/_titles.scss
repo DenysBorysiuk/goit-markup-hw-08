@@ -1,0 +1,10 @@
+.main-title {
+  @include fonts(44px, 60px, 900, 0.06em);
+  text-transform: uppercase;
+  color: var(--main-light);
+}
+
+.section-title {
+  @include fonts(36px, 42px, 700);
+  text-align: center;
+}

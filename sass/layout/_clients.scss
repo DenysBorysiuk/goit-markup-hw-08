@@ -1,0 +1,28 @@
+.clients {
+  @include section;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    --items: 6;
+  }
+}
+
+.clients__link {
+  display: block;
+  padding: 14px 30px;
+
+  border: 1px solid var(--icon-cl);
+  border-radius: 4px;
+  color: var(--icon-cl);
+
+  transition: color var(--animation), border-color var(--animation);
+
+  &:hover {
+    color: var(--accent-cl);
+    border-color: var(--accent-cl);
+  }
+}

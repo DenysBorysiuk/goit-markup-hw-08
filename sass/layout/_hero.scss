@@ -1,0 +1,32 @@
+.hero {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+
+  background-color: var(--dark-bg-cl);
+  background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
+    url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+.hero__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+}

@@ -1,0 +1,27 @@
+.benefits {
+  @include section;
+
+  &__list {
+    @extend %reset-list;
+    --items: 4;
+  }
+
+  &__img {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+
+    background-color: var(--light-bg-cl);
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+
+    @include fonts(14px, 16px, 700);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include fonts(14px, 24px);
+    color: var(--secondary-font-cl);
+  }
+}
