@@ -3,14 +3,36 @@
 
   &__list {
     @extend %reset-list;
-    --items: 4;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent;
+  }
+
+  &__item {
+    @include flex-basis($indent, 1);
+
+    @media screen and (min-width: $tablet) {
+      @include flex-basis($indent, 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include flex-basis($indent, 4);
+    }
   }
 
   &__img {
-    padding: 25px 100px;
+    padding: 25px 190px;
     margin-bottom: 30px;
 
     background-color: var(--light-bg-cl);
+
+    @media screen and (min-width: $tablet) {
+      padding: 25px 142px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 25px 100px;
+    }
   }
 
   &__subtitle {

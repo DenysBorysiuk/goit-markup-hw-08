@@ -1,10 +1,9 @@
-.card-set {
-  @extend %reset-list;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
+// .card-set {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: var(--indent);
 
-  &__item {
-    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  }
-}
+//   &__item {
+//     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+//   }
+// }

@@ -6,7 +6,7 @@
   }
 
   &__list {
-    display: flex;
+    @extend %reset-list;
     --items: 6;
   }
 }

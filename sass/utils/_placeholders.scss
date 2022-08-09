@@ -8,3 +8,9 @@
   text-decoration: none;
   color: currentColor;
 }
+
+%card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+}
