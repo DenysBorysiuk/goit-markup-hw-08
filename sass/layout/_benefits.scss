@@ -1,17 +1,21 @@
 .benefits {
   @include section;
 
+  @media screen and (min-width: $desktop) {
+    @include section(94px);
+  }
+
   &__list {
     @extend %reset-list;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: $indent;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $indent;
+    }
   }
 
   &__item {
-    @include flex-basis($indent, 1);
-
     @media screen and (min-width: $tablet) {
       @include flex-basis($indent, 2);
     }
@@ -19,6 +23,10 @@
     @media screen and (min-width: $desktop) {
       @include flex-basis($indent, 4);
     }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   &__img {

@@ -11,7 +11,9 @@
     @extend %reset-link;
     margin-right: 93px;
   }
-
+  @media screen and (min-width: $tablet) {
+    @include flex-basis($indent, 2);
+  }
   &__nav {
     margin-right: auto;
   }

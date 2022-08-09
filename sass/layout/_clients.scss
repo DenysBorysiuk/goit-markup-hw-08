@@ -2,18 +2,37 @@
   @include section;
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
     @extend %reset-list;
-    --items: 6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent;
+  }
+
+  &__item {
+    @extend %reset-list;
+    @include flex-basis($indent, 2);
+
+    @media screen and (min-width: $tablet) {
+      @include flex-basis($indent, 4);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include flex-basis($indent, 6);
+    }
   }
 }
 
 .clients__link {
   display: block;
-  padding: 14px 30px;
+  padding: 14px 50px;
 
   border: 1px solid var(--icon-cl);
   border-radius: 4px;
@@ -24,5 +43,13 @@
   &:hover {
     color: var(--accent-cl);
     border-color: var(--accent-cl);
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 14px 58px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 14px 30px;
   }
 }

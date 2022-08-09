@@ -2,10 +2,34 @@
   @include section;
 
   &__filter {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
     @extend %reset-list;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $indent;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: $tablet) {
+      @include flex-basis($indent, 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include flex-basis($indent, 3);
+    }
   }
 }
