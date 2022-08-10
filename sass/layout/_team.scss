@@ -12,12 +12,9 @@
 
   &__list {
     @extend %reset-list;
-
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $indent;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent;
   }
 
   &__item {
@@ -37,9 +34,12 @@
 
   &__content {
     padding-top: 30px;
-    padding-bottom: 30px;
-
+    padding-bottom: 24px;
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 30px;
+    }
   }
 
   &__subtitle {

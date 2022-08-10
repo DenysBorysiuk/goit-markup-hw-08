@@ -8,7 +8,6 @@
   }
 
   &__logo {
-    @extend %reset-link;
     margin-right: 93px;
   }
   @media screen and (min-width: $tablet) {

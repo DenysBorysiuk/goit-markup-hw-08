@@ -5,6 +5,10 @@
 }
 
 .section-title {
-  @include fonts(36px, 42px, 700);
+  @include fonts(28px, 33px, 700);
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    @include fonts(36px, 42px, 700);
+  }
 }

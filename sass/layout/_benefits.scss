@@ -1,18 +1,12 @@
 .benefits {
   @include section;
 
-  @media screen and (min-width: $desktop) {
-    @include section(94px);
-  }
-
   &__list {
     @extend %reset-list;
 
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $indent;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent;
   }
 
   &__item {
@@ -25,21 +19,28 @@
     }
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
-  &__img {
-    padding: 25px 190px;
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    max-width: 450px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-bottom: 30px;
 
     background-color: var(--light-bg-cl);
 
+    @media screen and (min-width: $mobile) {
+      padding-left: 190px;
+      padding-right: 190px;
+    }
+
     @media screen and (min-width: $tablet) {
-      padding: 25px 142px;
+      padding-left: 142px;
+      padding-right: 142px;
     }
     @media screen and (min-width: $desktop) {
-      padding: 25px 100px;
+      padding-left: 100px;
+      padding-right: 100px;
     }
   }
 
