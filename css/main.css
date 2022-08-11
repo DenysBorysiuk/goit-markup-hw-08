@@ -860,6 +860,34 @@ p {
   }
 }
 
+.hero {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  background-color: var(--dark-bg-cl);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--hero-gradient)), to(var(--hero-gradient))), url(../images/bg.jpg);
+  background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)), url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__title {
+  margin-bottom: 30px;
+}
+
+.hero__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+  -webkit-transition: background-color var(--animation);
+  transition: background-color var(--animation);
+}
+.hero__button:hover, .hero__button:focus {
+  background-color: var(--hover-btn);
+}
+
 .benefits {
   padding-top: 60px;
   padding-bottom: 60px;
