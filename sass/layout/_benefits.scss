@@ -3,45 +3,25 @@
 
   &__list {
     @extend %reset-list;
+    --items: 1;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: $indent;
-  }
-
-  &__item {
     @media screen and (min-width: $tablet) {
-      @include flex-basis($indent, 2);
+      --items: 2;
     }
 
     @media screen and (min-width: $desktop) {
-      @include flex-basis($indent, 4);
+      --items: 4;
     }
   }
 
   &__thumb {
     display: flex;
     justify-content: center;
-    max-width: 450px;
     padding-top: 25px;
     padding-bottom: 25px;
     margin-bottom: 30px;
 
     background-color: var(--light-bg-cl);
-
-    @media screen and (min-width: $mobile) {
-      padding-left: 190px;
-      padding-right: 190px;
-    }
-
-    @media screen and (min-width: $tablet) {
-      padding-left: 142px;
-      padding-right: 142px;
-    }
-    @media screen and (min-width: $desktop) {
-      padding-left: 100px;
-      padding-right: 100px;
-    }
   }
 
   &__subtitle {

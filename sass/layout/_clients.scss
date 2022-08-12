@@ -11,21 +11,14 @@
 
   &__list {
     @extend %reset-list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $indent;
-  }
-
-  &__item {
-    @extend %reset-list;
-    @include flex-basis($indent, 2);
+    --items: 2;
 
     @media screen and (min-width: $tablet) {
-      @include flex-basis($indent, 4);
+      --items: 3;
     }
 
     @media screen and (min-width: $desktop) {
-      @include flex-basis($indent, 6);
+      --items: 6;
     }
   }
 }
@@ -33,30 +26,14 @@
 .clients__link {
   display: flex;
   justify-content: center;
-  max-width: 226px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   border: 1px solid var(--icon-cl);
   border-radius: 4px;
   color: var(--icon-cl);
 
   transition: color var(--animation), border-color var(--animation);
-
-  @media screen and (min-width: $mobile) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    padding-left: 58px;
-    padding-right: 58px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 
   &:hover {
     color: var(--accent-cl);

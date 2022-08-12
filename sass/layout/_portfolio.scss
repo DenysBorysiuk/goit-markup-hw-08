@@ -15,21 +15,13 @@
 
   &__list {
     @extend %reset-list;
+    --items: 1;
 
     @media screen and (min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $indent;
+      --items: 2;
     }
-  }
-
-  &__item {
-    @media screen and (min-width: $tablet) {
-      @include flex-basis($indent, 2);
-    }
-
     @media screen and (min-width: $desktop) {
-      @include flex-basis($indent, 3);
+      --items: 3;
     }
   }
 }

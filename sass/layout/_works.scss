@@ -10,13 +10,6 @@
 
   &__list {
     @extend %reset-list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $indent;
-  }
-
-  &__item {
-    @include flex-basis($indent, 3);
   }
 
   &__thumb {

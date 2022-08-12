@@ -1,5 +1,5 @@
 .hero {
-  max-width: 480px;
+  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 118px;
@@ -11,6 +11,7 @@
     url(../images/hero/hero-bg_sm.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   // Для ретіна екранів мобільна версія
   @media (min-device-pixel-ratio: 2),
@@ -22,7 +23,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 768px;
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
       url(../images/hero/hero-bg_md.jpg);
 
@@ -37,7 +37,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),

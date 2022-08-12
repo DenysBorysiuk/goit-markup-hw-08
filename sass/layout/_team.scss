@@ -12,20 +12,18 @@
 
   &__list {
     @extend %reset-list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: $indent;
-  }
+    --items: 1;
 
-  &__item {
     @media screen and (min-width: $tablet) {
-      @include flex-basis($indent, 2);
+      --items: 2;
     }
 
     @media screen and (min-width: $desktop) {
-      @include flex-basis($indent, 4);
+      --items: 4;
     }
+  }
 
+  &__item {
     background-color: var(--main-light);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
