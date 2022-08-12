@@ -8,20 +8,42 @@
   }
 
   &__logo {
-    margin-right: 93px;
+    @media screen and (max-width: calc($tablet - 1px)) {
+      display: inline-flex;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 93px;
+    }
   }
-  @media screen and (min-width: $tablet) {
-    @include flex-basis($indent, 2);
-  }
+
   &__nav {
-    margin-right: auto;
+    @media screen and (min-width: $tablet) {
+      margin-right: auto;
+    }
   }
 
   &__list {
     @extend %reset-list;
+    display: none;
 
-    display: flex;
-    gap: 30px;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
   }
 
   &__item {
@@ -35,7 +57,6 @@
 
 .header__link {
   @extend %reset-link;
-
   display: flex;
   align-items: center;
 

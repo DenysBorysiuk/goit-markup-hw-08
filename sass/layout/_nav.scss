@@ -1,11 +1,17 @@
 .nav {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
 
   &__list {
     @extend %reset-list;
-    display: flex;
-    gap: 40px;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      gap: 40px;
+    }
   }
 }
 
