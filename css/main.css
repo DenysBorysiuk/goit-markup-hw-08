@@ -568,11 +568,19 @@ p {
 .registration-form__title {
   display: block;
   margin-bottom: 12px;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
-  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .registration-form__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 .registration-form__group {
   margin-bottom: 20px;
@@ -806,8 +814,8 @@ p {
 }
 .agreement__text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--secondary-font-cl);
   -webkit-user-select: none;
@@ -815,18 +823,18 @@ p {
       -ms-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 1200px) {
+  .agreement__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
 .agreement__link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   text-decoration: underline;
   text-underline-position: under;
   color: var(--accent-cl);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .agreement__icon {

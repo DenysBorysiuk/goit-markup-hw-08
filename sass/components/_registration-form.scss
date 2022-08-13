@@ -3,8 +3,12 @@
     display: block;
     margin-bottom: 12px;
 
-    @include fonts(20px, 23px, 700);
     text-align: center;
+    @include fonts(20px, 30px, 700);
+
+    @media screen and (min-width: $desktop) {
+      @include fonts(20px, 23px, 700);
+    }
   }
 
   &__group {

@@ -6,17 +6,19 @@
   margin-bottom: 30px;
 
   &__text {
-    @include fonts(14px, 24px);
+    @include fonts(12px, 14px);
     color: var(--secondary-font-cl);
     user-select: none;
+
+    @media screen and (min-width: $desktop) {
+      @include fonts(14px, 24px);
+    }
   }
 
   &__link {
-    @include fonts(14px, 24px);
     text-decoration: underline;
     text-underline-position: under;
     color: var(--accent-cl);
-    user-select: none;
   }
 }
 
