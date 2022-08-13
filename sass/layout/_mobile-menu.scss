@@ -1,0 +1,42 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+
+  background-color: var(--main-light);
+
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.menu-btn {
+  z-index: 11;
+  display: inline-flex;
+
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.icon-cross {
+  display: none;
+}
+.menu-btn.is-open .icon-cross {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
