@@ -1395,7 +1395,7 @@ p {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  max-width: 528px;
   padding: 40px;
   background-color: var(--main-light);
   border-radius: 4px;
