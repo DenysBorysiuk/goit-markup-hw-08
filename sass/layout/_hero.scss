@@ -18,7 +18,6 @@
   background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
     url('../images/hero/hero-bg_sm@1x.jpg');
 
-  // Для ретіна екранів мобільна версія
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
       -webkit-image-set(url('../images/hero/hero-bg_sm@2x.webp') 2x);
@@ -27,14 +26,13 @@
       url('../images/hero/hero-bg_sm@2x.jpg');
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
       -webkit-image-set(url('../images/hero/hero-bg_md@1x.webp') 1x);
 
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
       url('../images/hero/hero-bg_md@1x.jpg');
 
-    // Для ретіна екранів планшетна версія
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
         -webkit-image-set(url('../images/hero/hero-bg_md@2x.webp') 2x);
@@ -44,7 +42,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
@@ -53,7 +51,6 @@
     background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
       url('../images/hero/hero-bg_lg@1x.jpg');
 
-    // Для ретіна екранів десктопна версія
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(var(--hero-gradient), var(--hero-gradient)),
         -webkit-image-set(url('../images/hero/hero-bg_lg@2x.webp') 2x);

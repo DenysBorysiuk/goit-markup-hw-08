@@ -1,13 +1,9 @@
 .filter {
   @extend %reset-list;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
 }
 
 .filter__btn {
-  padding: 6px 22px;
+  padding: 6px 21px;
 
   @include fonts(16px, 26px, 500);
   color: var(--main-font-cl);
