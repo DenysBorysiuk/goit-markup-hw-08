@@ -873,6 +873,8 @@ p {
 }
 
 .agreement__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-transition: fill var(--animation);
   transition: fill var(--animation);
 }
@@ -1614,15 +1616,17 @@ p {
   }
 }
 
+.mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1646,9 +1650,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

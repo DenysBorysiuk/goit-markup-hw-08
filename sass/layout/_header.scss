@@ -1,12 +1,9 @@
 .header {
-  // position: relative;
-  // background-color: var(--main-light);
   border-bottom: 1px solid #ececec;
 
   &__container {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
 
     @media screen and (max-width: calc($tablet - 1px)) {
       justify-content: space-between;

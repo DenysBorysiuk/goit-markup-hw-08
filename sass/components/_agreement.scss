@@ -23,6 +23,7 @@
 }
 
 .agreement__icon {
+  flex-shrink: 0;
   transition: fill var(--animation);
 
   .agreement__checkbox:hover + &,
