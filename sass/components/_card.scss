@@ -5,14 +5,14 @@
   }
 
   &__text {
-    display: block;
+    // display: block;
     @include fonts(18px, 28px);
     text-align: center;
     color: var(--main-light);
 
-    // @media screen and (max-width: 350px) {
-    //   @include fonts(18px, 28px);
-    // }
+    @media screen and (max-width: 350px) {
+      @include fonts(16px, 28px);
+    }
   }
 
   &__content {
@@ -64,16 +64,13 @@
   transition: transform var(--animation);
 
   @media screen and (min-width: $mobile) {
-    padding: 77px 24px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
     padding-top: 49px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding-top: 63px;
-    padding-bottom: 63px;
+    padding-bottom: 77px;
   }
 
   .card__link:hover & {
