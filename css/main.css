@@ -1087,8 +1087,9 @@ p {
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
-  -webkit-transition: color var(--animation);
-  transition: color var(--animation);
+}
+.nav__link--current {
+  color: var(--accent-cl);
 }
 @media screen and (min-width: 768px) {
   .nav__link {
@@ -1105,17 +1106,12 @@ p {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    -webkit-transition: color var(--animation);
+    transition: color var(--animation);
   }
-}
-@media screen and (min-width: 768px) {
   .nav__link:hover, .nav__link:focus {
     color: var(--accent-cl);
   }
-}
-.nav__link--current {
-  color: var(--accent-cl);
-}
-@media screen and (min-width: 768px) {
   .nav__link--current::after {
     content: "";
     position: absolute;
