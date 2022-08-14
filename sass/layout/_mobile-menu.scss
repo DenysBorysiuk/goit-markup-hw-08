@@ -1,20 +1,55 @@
 .mobile-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 40px;
-
-  background-color: var(--main-light);
-
-  &.is-open {
-    display: flex;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
     flex-direction: column;
+    // overflow-y: scroll;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+
+    background-color: var(--main-light);
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
     justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__socials {
+    @extend %reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.mobile-menu__link {
+  @extend %reset-link;
+  @include fonts(18px, 22px, 500, 0.02em);
+  color: var(--accent-cl);
+
+  display: flex;
+  gap: 10px;
+
+  .mobile-menu__item:not(:last-child) &::after {
+    content: '';
+    display: block;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
   }
 }
 
@@ -32,9 +67,9 @@
 
 .icon-cross {
   display: none;
-}
-.menu-btn.is-open .icon-cross {
-  display: block;
+  .menu-btn.is-open & {
+    display: block;
+  }
 }
 
 .menu-btn.is-open .icon-menu {
