@@ -96,11 +96,12 @@
 
   @media screen and (min-width: $tablet) {
     align-items: center;
-    // justify-content: flex-start;
   }
 
-  &:hover,
-  &:focus {
-    color: var(--accent-cl);
+  @media screen and (min-width: $tablet) {
+    &:hover,
+    &:focus {
+      color: var(--accent-cl);
+    }
   }
 }

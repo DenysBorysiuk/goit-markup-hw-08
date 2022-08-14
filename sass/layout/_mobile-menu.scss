@@ -59,6 +59,7 @@
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media screen and (min-width: $tablet) {
     display: none;
@@ -70,8 +71,20 @@
   .menu-btn.is-open & {
     display: block;
   }
+
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: var(--accent-cl);
+  }
 }
 
-.menu-btn.is-open .icon-menu {
-  display: none;
+.icon-menu {
+  .menu-btn.is-open & {
+    display: none;
+  }
+
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: var(--accent-cl);
+  }
 }

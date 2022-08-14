@@ -35,9 +35,11 @@
     @include fonts(14px, 16px, 500, 0.02em);
   }
 
-  &:hover,
-  &:focus {
-    color: var(--accent-cl);
+  @media screen and (min-width: $tablet) {
+    &:hover,
+    &:focus {
+      color: var(--accent-cl);
+    }
   }
 
   &--current {

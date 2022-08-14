@@ -507,6 +507,7 @@ p {
   overflow: hidden;
 }
 .card__text {
+  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -563,12 +564,33 @@ p {
           transform: translateY(101%);
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--overlay-bg-cl);
   -webkit-transition: -webkit-transform var(--animation);
   transition: -webkit-transform var(--animation);
   transition: transform var(--animation);
   transition: transform var(--animation), -webkit-transform var(--animation);
+}
+@media screen and (min-width: 480px) {
+  .card__overlay {
+    padding: 77px 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__overlay {
+    padding-top: 49px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__overlay {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 }
 .card__link:hover .card__overlay {
   -webkit-transform: translateY(0);
@@ -1024,8 +1046,10 @@ p {
             align-items: center;
   }
 }
-.header__link:hover, .header__link:focus {
-  color: var(--accent-cl);
+@media screen and (min-width: 768px) {
+  .header__link:hover, .header__link:focus {
+    color: var(--accent-cl);
+  }
 }
 
 .nav__list {
@@ -1073,8 +1097,10 @@ p {
     letter-spacing: 0.02em;
   }
 }
-.nav__link:hover, .nav__link:focus {
-  color: var(--accent-cl);
+@media screen and (min-width: 768px) {
+  .nav__link:hover, .nav__link:focus {
+    color: var(--accent-cl);
+  }
 }
 .nav__link--current {
   color: var(--accent-cl);
@@ -1659,6 +1685,7 @@ p {
   display: inline-flex;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .menu-btn {
@@ -1672,7 +1699,13 @@ p {
 .menu-btn.is-open .icon-cross {
   display: block;
 }
+.menu-btn:hover .icon-cross, .menu-btn:focus .icon-cross {
+  fill: var(--accent-cl);
+}
 
 .menu-btn.is-open .icon-menu {
   display: none;
+}
+.menu-btn:hover .icon-menu, .menu-btn:focus .icon-menu {
+  fill: var(--accent-cl);
 }/*# sourceMappingURL=main.css.map */
