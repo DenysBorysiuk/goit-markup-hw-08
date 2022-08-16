@@ -29,6 +29,10 @@
 
     @include fonts(14px, 16px, 700);
     text-transform: uppercase;
+
+    @media screen and(max-width: calc($tablet - 1px)) {
+      text-align: center;
+    }
   }
 
   &__text {
